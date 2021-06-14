@@ -14,10 +14,10 @@ const Part = (props) => {
 
 const Content = (props) => {
   const items = [];
-  props.parts.forEach((farts) => {
+  props.parts.forEach((parts) => {
     items.push(
       <p>
-        <Part part={farts.name} excercises={farts.excercises} />
+        <Part part={parts.name} excercises={parts.excercises} />
       </p>
     );
   });
