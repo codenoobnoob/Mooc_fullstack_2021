@@ -75,7 +75,7 @@ const App = () => {
           <h3>Languages</h3>
           <ul>
             {country.languages.map((language) => (
-              <li>{language.name}</li>
+              <li key={language.name}>{language.name}</li>
             ))}
           </ul>
           <p>
@@ -137,8 +137,8 @@ const App = () => {
         value={findCountry}
         onChange={onFindCountryChange}
       />
-      <ShowCountry />
-      <Countries countries={countries} filter={findCountry} />
+      <ShowCountry key="openCountry" />
+      <Countries key="countryList" countries={countries} filter={findCountry} />
     </div>
   );
 };
